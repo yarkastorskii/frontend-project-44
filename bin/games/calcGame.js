@@ -30,7 +30,7 @@ export function calcGame(main, userName) {
         console.log(`Question: ${randint0} ${randOperation} ${randint1}`);
         let userAnswer = readlineSync.question("Your answer: ")
         if (userAnswer) {
-            if (QValue === parseInt(userAnswer)) {
+            if (QValue === Number.parseInt(userAnswer)) {
                 console.log(`Correct!`);
                 correctStreak++;
             } else {

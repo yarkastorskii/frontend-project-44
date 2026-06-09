@@ -14,10 +14,10 @@ export function progressGame(main, userName) {
 
         progression[randIndex] = ".."
 
-        console.log(`Question: ${String(progression).replace(/,/g, ' ')}`);
+        console.log(`Question: ${String(progression).replaceAll(',', ' ')}`);
         let userAnswer = readlineSync.question("Your answer: ")
         if (userAnswer) {
-            if (condition === parseInt(userAnswer)) {
+            if (condition === Number.parseInt(userAnswer)) {
                 console.log(`Correct!`);
                 correctStreak++;
             } else {

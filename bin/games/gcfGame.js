@@ -41,7 +41,7 @@ function generatePairWithCommonDivisor(maxValue = Math.floor(Math.random()*100),
   
     const divisor = Math.floor(Math.random() * (maxDivisor - 1)) + 2;
   
-    const maxFactor = Math.floor(maxValue / divisor);``
+    const maxFactor = Math.floor(maxValue / divisor);
     const factor1 = Math.floor(Math.random() * maxFactor);
     const factor2 = Math.floor(Math.random() * maxFactor);
   

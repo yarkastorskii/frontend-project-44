@@ -1,5 +1,5 @@
 {
-  "name": "frontend-project-44",
+  "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/yarkastorskii/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/yarkastorskii/frontend-project-44/actions)",
   "main": "index.js",
@@ -23,13 +23,11 @@
   "homepage": "https://github.com/yarkastorskii/frontend-project-44#readme",
   "bin": {
     "brain-games": "bin/brain-games.js",
-    "games": {
-      "even-game": "bin/games/evenGame.js",
-      "calc-game": "bin/games/calcGame.js",
-      "gcf-game": "bin/games/gcfGame.js",
-      "progress-game": "bin/games/progressGame.js",
-      "isPrime-game": "bin/games/isPrimeGame.js"
-    }
+    "even-game": "bin/games/evenGame.js",
+    "calc-game": "bin/games/calcGame.js",
+    "gcf-game": "bin/games/gcfGame.js",
+    "progress-game": "bin/games/progressGame.js",
+    "isPrime-game": "bin/games/isPrimeGame.js"
   },
   "dependencies": {
     "readline-sync": "^1.4.10"

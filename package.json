@@ -4,6 +4,9 @@
   "description": "[![Actions Status](https://github.com/yarkastorskii/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/yarkastorskii/frontend-project-44/actions)",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint . --ext .js",
+    "lint-fix": "eslint . --ext .js --fix",
+    "sonar": "sonar-scanner",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,5 +33,9 @@
   },
   "dependencies": {
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^10.4.1",
+    "globals": "^17.6.0"
   }
 }

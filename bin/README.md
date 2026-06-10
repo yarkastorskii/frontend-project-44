@@ -1,9 +1,7 @@
 # Brain Games
 
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)](https://nodejs.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![SonarQube Quality Gate](https://img.shields.io/badge/SonarQube-Passed-brightgreen)](https://sonarcloud.io/dashboard?id=brain-games)  
-*Проект проверен в SonarQube – качество кода подтверждено.*
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=yarkastorskii_frontend-project-44&metric=alert_status)](https://sonarcloud.io/project/overview?id=yarkastorskii_frontend-project-44)
 
 ---
 
@@ -32,8 +30,8 @@
 
 1. **Клонируйте репозиторий**  
    ```bash
-   git clone https://github.com/your-username/brain-games.git
-   cd brain-games
+   git clone https://github.com/yarkastorskii/frontend-project-44/tree/main
+   cd frontend-project-44
    ```
 
 2. **Установите зависимости**  
@@ -64,32 +62,47 @@
 
 ---
 
-## Примеры игр (Asciinema)
+## Примеры игр
 
 Ниже приведены записи, демонстрирующие успешный и неудачный проходы:
 
-- **Успешное прохождение (все три ответа правильные)**  
-  [![asciicast](https://asciinema.org/a/example-success.svg)](https://asciinema.org/a/example-success)  
-  *Ссылка на запись*
-
-- **Неудачное прохождение (ошибка в ответе)**  
-  [![asciicast](https://asciinema.org/a/example-failure.svg)](https://asciinema.org/a/example-failure)  
-  *Ссылка на запись*
-
-> **Примечание:** записи можно создать с помощью утилиты [asciinema](https://asciinema.org/). Замените ссылки-заглушки на реальные после публикации ваших скринкастов.
+1. Игра «Проверка на чётность»
+- **Успешное прохождение**
+![Успешное прохождение](../img/correct1.jpeg)
+- **Неудачное прохождение**
+![Неудачное прохождение](../img/incorrect1.jpeg)
+2. Игра «Калькулятор»
+- **Успешное прохождение**
+![Успешное прохождение](../img/correct2.jpeg)
+- **Неудачное прохождение**
+![Неудачное прохождение](../img/incorrect2.jpeg)
+3. Игра «НОД»
+- **Успешное прохождение**
+![Успешное прохождение](../img/correct3.jpeg)
+- **Неудачное прохождение**
+![Неудачное прохождение](../img/incorrect3.jpeg)
+4. Игра «Арифметическая прогрессия»
+- **Успешное прохождение**
+![Успешное прохождение](../img/correct4.jpeg)
+- **Неудачное прохождение**
+![Неудачное прохождение](../img/incorrect4.jpeg)
+5. Игра «Простое число»
+- **Успешное прохождение**
+![Успешное прохождение](../img/correct5.jpeg)
+- **Неудачное прохождение**
+![Неудачное прохождение](../img/incorrect5.jpeg)
 
 ---
 
 ## SonarQube
 
-Проект регулярно анализируется с помощью **SonarQube** (локально или через SonarCloud).  
+Проект регулярно анализируется с помощью **SonarQube**.  
 Проверяются:
 - дублирование кода,
 - потенциальные ошибки,
-- соблюдение соглашений о стиле,
-- тестовое покрытие (в будущем).
+- соблюдение соглашений о стиле
 
-Бейдж в шапке README отражает текущее состояние качества кода – **Passed** (зелёный).
+Бейдж в шапке `README` отражает текущее состояние качества кода – **Passed** (зелёный).
 
 ---
 

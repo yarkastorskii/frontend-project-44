@@ -1,1 +1,64 @@
-node bin/brain-games.js
+NODE = node
+NPM = npm
+MAIN = brain-games.js
+GAMES_DIR = games
+
+.DEFAULT_GOAL = start
+
+install:
+	$(NPM) install
+
+start:
+	$(NODE) $(MAIN)
+
+game-even:
+	$(NODE) $(GAMES_DIR)/evenGame.js
+
+game-calc:
+	$(NODE) $(GAMES_DIR)/calcGame.js
+
+game-gcf:
+	$(NODE) $(GAMES_DIR)/gcfGame.js
+
+game-progress:
+	$(NODE) $(GAMES_DIR)/progressGame.js
+
+game-prime:
+	$(NODE) $(GAMES_DIR)/isPrimeGame.js
+
+lint:
+	npx eslint . --ext .js
+
+lint-fix:
+	npx eslint . --ext .js --fix
+
+format:
+	npx prettier --write "**/*.js"
+
+check:
+	$(NODE) --check $(MAIN)
+	$(NODE) --check $(GAMES_DIR)/evenGame.js
+	$(NODE) --check $(GAMES_DIR)/calcGame.js
+	$(NODE) --check $(GAMES_DIR)/gcfGame.js
+	$(NODE) --check $(GAMES_DIR)/progressGame.js
+	$(NODE) --check $(GAMES_DIR)/isPrimeGame.js
+	$(NODE) --check uni-f.js
+
+clean:
+	rm -rf node_modules package-lock.json
+
+help:
+	@echo "Доступные цели Makefile:"
+	@echo "  install      - установить зависимости (npm install)"
+	@echo "  start        - запустить главное меню игры"
+	@echo "  game-even    - запустить игру 'Проверка на чётность'"
+	@echo "  game-calc    - запустить игру 'Калькулятор'"
+	@echo "  game-gcf     - запустить игру 'НОД'"
+	@echo "  game-progress- запустить игру 'Арифметическая прогрессия'"
+	@echo "  game-prime   - запустить игру 'Простое число'"
+	@echo "  lint         - проверить стиль кода (ESLint)"
+	@echo "  lint-fix     - автоматически исправить стиль"
+	@echo "  format       - отформатировать код (Prettier)"
+	@echo "  check        - проверить синтаксис всех JS-файлов"
+	@echo "  clean        - удалить node_modules и lock-файл"
+	@echo "  help         - показать эту справку"

@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
+console.log('Welcome to the Brain Games!');
+const userName = readlineSync.question('May I have your name? ');
+console.log(`Hello, ${userName}!`);
+
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
 function isPrime(n) {
@@ -26,8 +30,8 @@ while (correctCount < 3) {
     correctCount++;
   } else {
     console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
-    console.log(`Let's try again!`);
+    console.log(`Let's try again, ${userName}!`);
     process.exit(1);
   }
 }
-console.log('Congratulations!');
+console.log(`Congratulations, ${userName}!`);

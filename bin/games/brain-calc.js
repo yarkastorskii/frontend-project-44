@@ -18,7 +18,7 @@ let correctCount = 0;
 while (correctCount < 3) {
   const num1 = randomInt(0, 100);
   const num2 = randomInt(0, 100);
-  const op = operations[Math.floor(Math.random() * operations.length)];
+  const op = operations[randomInt(0, operations.length)];
   const question = `${num1} ${op.symbol} ${num2}`;
   const correctAnswer = op.func(num1, num2);
 

@@ -1,35 +1,26 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import { randomInt } from 'crypto';
 
 console.log('Welcome to the Brain Games!');
 const userName = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${userName}!`);
 
-console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-
-function isPrime(n) {
-  if (n < 2) return false;
-  if (n === 2) return true;
-  if (n % 2 === 0) return false;
-  for (let i = 3; i <= Math.sqrt(n); i += 2) {
-    if (n % i === 0) return false;
-  }
-  return true;
-}
+console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 let correctCount = 0;
 while (correctCount < 3) {
-  const number = Math.floor(Math.random() * 100) + 1;
-  const correctAnswer = isPrime(number) ? 'yes' : 'no';
-
+  const number = randomInt(0, 100);
   console.log(`Question: ${number}`);
   const userAnswer = readlineSync.question('Your answer: ');
+  const isEven = number % 2 === 0;
+  const expectedAnswer = isEven ? 'yes' : 'no';
 
-  if (userAnswer === correctAnswer) {
+  if (userAnswer === expectedAnswer) {
     console.log('Correct!');
     correctCount++;
   } else {
-    console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
+    console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${expectedAnswer}".`);
     console.log(`Let's try again, ${userName}!`);
     process.exit(1);
   }
